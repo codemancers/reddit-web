@@ -1,0 +1,35 @@
+{
+  "name": "reddit-web",
+  "version": "0.0.1",
+  "description": "An alternative interface to Reddit",
+  "jspm": {
+    "directories": {
+      "baseURL": "src",
+      "lib": "src",
+      "packages": "jspm_packages"
+    },
+    "configFile": "src/scripts/jspm.js",
+    "dependencies": {
+      "angular": "^1.3.11"
+    }
+  },
+  "dependencies": {
+    "body-parser": "^1.10.2",
+    "express": "^4.11.1",
+    "method-override": "^2.3.1",
+    "morgan": "^1.5.1"
+  },
+  "devDependencies": {
+    "connect-livereload": "^0.5.2",
+    "gulp": "^3.8.10",
+    "gulp-autoprefixer": "^2.1.0",
+    "gulp-jshint": "^1.9.0",
+    "gulp-livereload": "^3.6.0",
+    "gulp-load-plugins": "^0.8.0",
+    "gulp-nodemon": "^1.0.5",
+    "gulp-sourcemaps": "^1.3.0",
+    "jshint-stylish": "^1.0.0",
+    "opn": "^1.0.1",
+    "require-dir": "^0.1.0"
+  }
+}
