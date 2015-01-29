@@ -1,18 +1,42 @@
 <!doctype html>
 <html class="no-js">
-  <head>
-    <base href="/">
-    <meta charset="utf-8">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="mobile-web-app-capable" content="yes">
-    <title>reddit web</title>
-    <script src="jspm_packages/system.js"></script>
-    <script src="scripts/jspm.js"></script>
+
+<head>
+  <base href="/">
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <title>reddit web</title>
+
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=RobotoDraft:400,500,700,400italic">
+  <link type="text/css" rel="stylesheet" href="/styles/app.css">
+
+  <body layout="row" class="ng-cloak">
+    <md-sidenav md-component-id="left" class="sidebar md-sidenav-left md-whiteframe-z2" md-is-locked-open="$media('gt-sm')">
+      <md-toolbar>
+        <h1 class="md-toolbar-tools">
+          <a ui-sref="front">RedditWeb</a>
+        </h1>
+      </md-toolbar>
+      <md-content>
+        <ul class="menu">
+          <li>
+            <a class="md-button" ui-sref="front">Front Page</a>
+          </li>
+        </ul>
+      </md-content>
+    </md-sidenav>
+
+    <div ui-view layout="row" flex></div>
+
+    <script src="/jspm_packages/system.js"></script>
+    <script src="/scripts/jspm.js"></script>
     <script>
-      System.import('app/scripts/main');
+      System.baseURL = '/';
+      System.import('app/scripts/bootstrap');
     </script>
-    <body>
-    </body>
+  </body>
+
 </html>

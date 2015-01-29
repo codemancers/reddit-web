@@ -1,0 +1,35 @@
+[ng\:cloak],
+[ng-cloak],
+[data-ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
+.x-ng-cloak {
+  display: none !important;
+}
+
+body {
+  overflow: hidden;
+  font-size: 14px;
+}
+
+md-toolbar.md-default-theme {
+  background-color: #3F51B5;
+  color: #E8EAF6;
+}
+
+.sidebar.md-locked-open {
+  min-width: 230px;
+}
+
+.sidebar .menu {
+  list-style: none;
+  padding: 0;
+}
+
+.img-circle {
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin: 16px;
+}

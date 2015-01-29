@@ -8,8 +8,10 @@ gulp.task('watch', ['nodemon', 'css'], function() {
 
   gulp.watch([
     '.tmp/styles/**/*.css',
-    'app/images/**/*'
+    'src/images/**/*'
   ]).on('change', $.livereload.changed);
+
+  gulp.watch('src/styles/app.css', ['css']);
 
   require('opn')('http://localhost:9000');
 });

@@ -10,5 +10,5 @@ An alternative interface to Reddit.
 
 ## Setup
 
-1. `npm install`
+1. `npm install && jspm install`
 2. `gulp`
