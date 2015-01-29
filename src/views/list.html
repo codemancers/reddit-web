@@ -12,7 +12,9 @@
             <img ng-src="{{::item.thumbnail}}" class="img-circle">
           </div>
           <div class="md-tile-content">
-            <h3>{{::item.title}}</h3>
+            <h3>
+              <a ui-sref=".item({id: item.id, slug: item.slug})">{{::item.title}}</a>
+            </h3>
           </div>
         </md-item-content>
         <md-divider ng-if="!$last"></md-divider>
@@ -21,6 +23,6 @@
   </md-content>
 </div>
 <div layout="column" flex="66">
-  <md-toolbar>
-  </md-toolbar>
+  <md-toolbar></md-toolbar>
+  <md-content md-scroll-y ui-view style="margin-left: 10px;"></md-content>
 </div>
