@@ -12,6 +12,7 @@ System.config({
   "map": {
     "angular": "github:angular/bower-angular@1.3.11",
     "angular-material": "github:angular/bower-material@0.7.0",
+    "angular-mocks": "github:angular/bower-angular-mocks@1.3.11",
     "angular-ui-router": "github:angular-ui/ui-router@0.2.13",
     "css": "github:systemjs/plugin-css@0.1.0",
     "hammer": "github:hammerjs/hammer.js@2.0.4",
@@ -24,6 +25,9 @@ System.config({
       "angular": "github:angular/bower-angular@1.3.11"
     },
     "github:angular/bower-angular-aria@1.3.11": {
+      "angular": "github:angular/bower-angular@1.3.11"
+    },
+    "github:angular/bower-angular-mocks@1.3.11": {
       "angular": "github:angular/bower-angular@1.3.11"
     },
     "github:angular/bower-material@0.7.0": {
