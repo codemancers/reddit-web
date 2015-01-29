@@ -11,7 +11,7 @@ module.exports = function(config) {
     },
 
     proxies: {
-      '/jspm_packages': process.cwd() + '/jspm_packages'
+      '/jspm_packages': __dirname + '/jspm_packages'
     },
 
     colors: true,
