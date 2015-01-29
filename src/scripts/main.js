@@ -8,13 +8,11 @@ window.Hammer = Hammer;
 import angular from 'angular';
 import 'angular-material';
 import 'angular-ui-router';
-import 'ng-infinite-scroll';
 
 var app = angular
   .module('redditWeb', [
     'ngMaterial',
-    'ui.router',
-    'infinite-scroll'
+    'ui.router'
   ]);
 
 export default app;

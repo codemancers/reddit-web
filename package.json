@@ -16,8 +16,7 @@
       "angular-ui-router": "^0.2.13",
       "css": "^0.1.0",
       "hammer": "^2.0.4",
-      "lodash": "^3.0.0",
-      "ng-infinite-scroll": "github:sroze/ngInfiniteScroll@^1.2.0"
+      "lodash": "^3.0.0"
     }
   },
   "dependencies": {

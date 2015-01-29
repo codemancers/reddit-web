@@ -17,7 +17,6 @@ System.config({
     "css": "github:systemjs/plugin-css@0.1.0",
     "hammer": "github:hammerjs/hammer.js@2.0.4",
     "lodash": "npm:lodash@3.0.0",
-    "ng-infinite-scroll": "github:sroze/ngInfiniteScroll@1.2.0",
     "github:angular-ui/ui-router@0.2.13": {
       "angular": "github:angular/bower-angular@1.3.11"
     },
@@ -39,9 +38,6 @@ System.config({
     },
     "github:jspm/nodelibs-process@0.1.0": {
       "process": "npm:process@0.10.0"
-    },
-    "github:sroze/ngInfiniteScroll@1.2.0": {
-      "angular": "github:angular/bower-angular@1.3.11"
     },
     "npm:lodash@3.0.0": {
       "process": "github:jspm/nodelibs-process@0.1.0"
