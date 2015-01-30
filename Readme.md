@@ -10,5 +10,6 @@ An alternative interface to Reddit.
 
 ## Setup
 
-1. `npm install && jspm install`
-2. `gulp`
+1. `npm install -g gulp jspm` (if not already installed globally)
+2. `npm install && jspm install`
+3. `gulp`
