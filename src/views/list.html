@@ -4,7 +4,7 @@
       <a ng-href="{{ctrl.title}}">{{ctrl.title}}</a>
     </h1>
   </md-toolbar>
-  <md-content md-scroll-y flex infinite-scroll="ctrl.subReddit.list()">
+  <md-content md-scroll-y flex rw-infinite-scroll="ctrl.subReddit.list()">
     <md-list>
       <md-item ng-repeat="item in ctrl.subReddit.items">
         <md-item-content>

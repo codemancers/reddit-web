@@ -7,7 +7,7 @@ import app from '../main';
 function infiniteScroll($log) {
   return {
     scope: {
-      infiniteScroll: '&'
+      rwInfiniteScroll: '&'
     },
 
     link: function(scope, elem) {
@@ -15,8 +15,8 @@ function infiniteScroll($log) {
 
       function onScroll() {
         if (dom.scrollTop + dom.offsetHeight >= dom.scrollHeight) {
-          $log.info('infiniteScroll: reached element bottom, calling function from parent scope');
-          scope.$apply(scope.infiniteScroll);
+          $log.info('rwInfiniteScroll: reached element bottom, calling function from parent scope');
+          scope.$apply(scope.rwInfiniteScroll);
         }
       }
 
@@ -27,4 +27,4 @@ function infiniteScroll($log) {
 
 infiniteScroll.$inject = ['$log'];
 
-app.directive('infiniteScroll', infiniteScroll);
+app.directive('rwInfiniteScroll', infiniteScroll);
