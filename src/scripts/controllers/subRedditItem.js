@@ -2,11 +2,14 @@
 
 import app from '../main';
 import '../services/subReddit';
+import '../services/comments';
 
-function SubRedditItemController($stateParams, subReddit) {
+function SubRedditItemController($stateParams, subReddit, Comments) {
   this.item = subReddit.find($stateParams.id);
+  this.comments = new Comments($stateParams.id);
+  this.comments.list();
 }
 
-SubRedditItemController.$inject = ['$stateParams', 'subReddit'];
+SubRedditItemController.$inject = ['$stateParams', 'subReddit', 'Comments'];
 
 app.controller('SubRedditItemController', SubRedditItemController);
