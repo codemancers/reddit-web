@@ -5,7 +5,8 @@ System.config({
     "github:*": "../jspm_packages/github/*.js",
     "reddit-web/*": "/*.js",
     "npm:*": "../jspm_packages/npm/*.js"
-  }
+  },
+  "parser": "6to5"
 });
 
 System.config({
