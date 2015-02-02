@@ -1,0 +1,13 @@
+<div class="md-tile-content comment" ng-if="item.data.body">
+  <p>
+    <a href="#" class="author">{{::item.data.author}}</a>
+    <span class="created" am-time-ago="::item.data.created"></span>
+  </p>
+  <div class="body" btf-markdown="::item.data.body"></div>
+
+  <md-card ng-if="item.data.replies">
+    <div ng-repeat="item in item.data.replies.data.children" ng-include="'views/comments.html'">
+    </div>
+  </md-card>
+</div>
+<md-divider ng-if="!$last"></md-divider>

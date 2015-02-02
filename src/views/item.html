@@ -10,25 +10,10 @@
   <md-toolbar class="md-accent">
     <h1 class="md-toolbar-tools">Comments</h1>
   </md-toolbar>
-  <md-card-content>
-    <md-list>
-      <md-item ng-repeat="item in ctrl.comments.items">
-        <md-item-content>
-          <div class="md-tile-content comment">
-            <p>
-              <a href="#" class="author">{{::item.data.author}}</a>
-              <span class="created" am-time-ago="::item.data.created"></span>
-            </p>
-            <div class="body" btf-markdown="::item.data.body"></div>
-          </div>
-        </md-item-content>
-        <md-divider ng-if="!$last"></md-divider>
-      </md-item>
-      <md-item ng-show='ctrl.comments.busy'>
-        <md-item-content layout-align="space-around">
-          <md-progress-circular md-mode="indeterminate" md-diameter="36"></md-progress-circular>
-        </md-item-content>
-      </md-item>
-    </md-list>
-  </md-card-content>
+    <div ng-repeat="item in ctrl.comments.items" ng-include="'views/comments.html'">
+    </div>
+
+    <div ng-if='ctrl.comments.busy' layout="column" layout-align="center center">
+      <md-progress-circular md-mode="indeterminate" md-diameter="36"></md-progress-circular>
+    </div>
 </md-card>
