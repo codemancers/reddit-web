@@ -5,9 +5,9 @@
   </p>
   <div class="body" btf-markdown="::item.data.body"></div>
 
-  <md-card ng-if="item.data.replies">
+  <div class="replies" ng-if="item.data.replies">
     <div ng-repeat="item in item.data.replies.data.children" ng-include="'views/comments.html'">
     </div>
-  </md-card>
+  </div>
 </div>
 <md-divider ng-if="!$last"></md-divider>
