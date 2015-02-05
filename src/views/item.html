@@ -10,10 +10,12 @@
   <md-toolbar class="md-accent">
     <h1 class="md-toolbar-tools">Comments</h1>
   </md-toolbar>
-    <div ng-repeat="item in ctrl.comments.items" ng-include="'views/comments.html'">
-    </div>
 
-    <div ng-if='ctrl.comments.busy' layout="column" layout-align="center center">
-      <md-progress-circular md-mode="indeterminate" md-diameter="36"></md-progress-circular>
-    </div>
+  <div class="comments">
+    <rw-comments comments="ctrl.comments.items"></comments>
+  </div>
+
+  <div ng-if='ctrl.comments.busy' layout="column" layout-align="center center">
+    <md-progress-circular md-mode="indeterminate" md-diameter="36"></md-progress-circular>
+  </div>
 </md-card>

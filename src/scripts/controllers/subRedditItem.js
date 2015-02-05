@@ -1,6 +1,8 @@
 'use strict';
 
 import app from '../main';
+import '../directives/comments';
+import '../directives/comment';
 import '../services/subReddit';
 import '../services/comments';
 

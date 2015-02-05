@@ -37,8 +37,6 @@ function commentsFactory($http) {
           this.items.push(item);
         }, this);
 
-        console.log('items', items);
-
         this.busy = false;
       });
     }

@@ -1,0 +1,11 @@
+<div class="md-tile-content"
+    ng-class="{ comment: comment.data.parent_id === comment.data.link_id, reply: comment.data.parent_id !== comment.data.link_id }"
+    ng-show="::comment.kind !== 'more'">
+
+  <p>
+    <a href="#" class="author">{{::comment.data.author}}</a>
+    <span class="created" am-time-ago="::comment.data.created"></span>
+  </p>
+
+  <div class="body" btf-markdown="::comment.data.body"></div>
+</div>

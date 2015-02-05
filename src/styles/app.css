@@ -29,6 +29,14 @@ body {
   margin: 16px;
 }
 
+.comment {
+  border-bottom: 1px solid rgba(0,0,0,0.12);
+}
+
+.comment:last-child {
+  border-bottom: 0;
+}
+
 .comment .author {
   font-weight: 500;
 }
@@ -41,13 +49,6 @@ body {
   font-size: 1.0em;
 }
 
-.replies {
+.reply {
   border: 1px dotted rgba(0, 0, 0, 0.12);
-  border-radius: 2px;
-  margin-top: 10px;
-}
-
-.replies md-divider {
-  border-top: 1px dotted;
-  border-top-color: rgba(0,0,0,0.12);
 }
