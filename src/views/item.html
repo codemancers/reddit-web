@@ -1,8 +1,8 @@
 <md-card>
-  <img ng-src="{{::ctrl.item.url}}" class="img-responsive" ng-if="ctrl.item.hasImage()">
+  <img ng-src="{{::ctrl.post.url}}" class="img-responsive" ng-if="::ctrl.post.hasImage()">
 
   <md-card-content>
-    <p>{{::ctrl.item.title}}</p>
+    <p>{{::ctrl.post.title}}</p>
   </md-card-content>
 </md-card>
 
