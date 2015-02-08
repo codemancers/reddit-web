@@ -1,8 +1,14 @@
 <md-card>
   <img ng-src="{{::ctrl.post.url}}" class="img-responsive" ng-if="::ctrl.post.hasImage()">
 
+  <div class="embed" ng-bind-html="::ctrl.post.mediaHtml()" ng-if="::ctrl.post.media" layout="row" layout-padding layout-align="center center"></div>
+
   <md-card-content>
-    <p>{{::ctrl.post.title}}</p>
+    <div class="selftext" btf-markdown="::ctrl.post.selftext" ng-if="::ctrl.post.selftext"></div>
+
+    <div class="title">
+      <a ng-href="{{::ctrl.post.url}}" ng-attr-title="{{::ctrl.post.url}}" target="_blank">{{::ctrl.post.title}}</a>
+    </div>
   </md-card-content>
 </md-card>
 

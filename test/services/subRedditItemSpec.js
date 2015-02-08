@@ -52,4 +52,26 @@ describe('Service: SubRedditItem', function() {
       expect(subRedditItem.hasImage()).toBe(false);
     });
   });
+
+  describe('mediaHtml', function() {
+    var $sce;
+
+    beforeEach(function() {
+      inject(function($injector) {
+        $sce = $injector.get('$sce');
+      });
+    });
+
+    it('should return the embedded media html as trusted html', function() {
+      var subRedditItem = new SubRedditItem({
+        media: {
+          oembed: {
+            html: '&lt;h1&gt;foo&lt;/h1&gt;'
+          }
+        }
+      });
+
+      expect($sce.getTrustedHtml(subRedditItem.mediaHtml())).toEqual('<h1>foo</h1>');
+    });
+  });
 });
