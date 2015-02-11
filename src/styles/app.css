@@ -12,8 +12,19 @@ body {
   font-size: 14px;
 }
 
+a {
+  text-decoration: none;
+}
+
+time {
+  border-bottom: 1px dashed;
+  cursor: help;
+}
+
 .sidebar.md-locked-open {
-  min-width: 230px;
+  width: 254px;
+  min-width: 254px;
+  max-width: 254px;
 }
 
 .sidebar .menu {
@@ -31,6 +42,20 @@ body {
 
 .comment {
   border-bottom: 1px solid rgba(0,0,0,0.12);
+}
+
+.post.active {
+  background-color: #F6F6F6;
+}
+
+.post .title {
+  color: #333;
+  font-weight: 500;
+}
+
+.post .tagline {
+  color: #888;
+  font-size: 0.95em;
 }
 
 .comment:last-child {
@@ -51,4 +76,8 @@ body {
 
 .reply {
   border: 1px dotted rgba(0, 0, 0, 0.12);
+}
+
+.muted {
+  color: #777;
 }

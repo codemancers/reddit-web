@@ -1,20 +1,25 @@
 <div layout="column" flex="33" class="md-whiteframe-z1">
   <md-toolbar>
     <h1 class="md-toolbar-tools">
-      <a ng-href="{{ctrl.title}}">{{ctrl.title}}</a>
+      <a ng-href="{{::ctrl.title}}">{{::ctrl.title}}</a>
     </h1>
   </md-toolbar>
   <md-content md-scroll-y flex rw-infinite-scroll="ctrl.subReddit.list()">
     <md-list>
       <md-item ng-repeat="item in ctrl.subReddit.items">
-        <md-item-content>
+        <md-item-content class="post" ui-sref-active="active">
           <div class="md-tile-left" ng-show="::item.thumbnail">
             <img ng-src="{{::item.thumbnail}}" class="img-circle">
           </div>
           <div class="md-tile-content">
             <h3>
-              <a ui-sref=".item({id: item.id, slug: item.slug})">{{::item.title}}</a>
+              <a class="title" ui-sref=".item({id: item.id, slug: item.slug})">{{::item.title}}</a>
             </h3>
+            <p class="tagline">
+              submitted <time class="created" am-time-ago="::item.created_utc" ng-attr-title="{{::item.created_utc | amDateFormat:'MMM D, YYYY, h:mm A'}}"></time>
+              by <a class="muted" href="#">{{::item.author}}</a>
+              to <a class="muted" ng-href="/r/{{::item.subreddit}}/">{{::item.subreddit}}</a>
+            </p>
           </div>
         </md-item-content>
         <md-divider></md-divider>
@@ -30,5 +35,5 @@
 </div>
 <div layout="column" flex="66">
   <md-toolbar></md-toolbar>
-  <md-content md-scroll-y ui-view style="margin-left: 1px;"></md-content>
+  <md-content md-scroll-y ui-view style="margin-left: 2px;"></md-content>
 </div>
