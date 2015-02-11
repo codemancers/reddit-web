@@ -4,7 +4,7 @@
 
   <p>
     <a href="#" class="author">{{::comment.data.author}}</a>
-    <span class="created" am-time-ago="::comment.data.created"></span>
+    <time class="created" am-time-ago="::comment.data.created_utc" ng-attr-title="{{::comment.data.created_utc | amDateFormat:'MMM D, YYYY, h:mm A'}}"></time>
   </p>
 
   <div class="body" btf-markdown="::comment.data.body"></div>
