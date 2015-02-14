@@ -12,13 +12,24 @@
             <img ng-src="{{::item.thumbnail}}" class="img-circle">
           </div>
           <div class="md-tile-content">
+            <p class="tagline">
+              <span class="num-comments">{{::item.num_comments}} comments</span>
+              <span class="domain">
+                <a href="#">{{::item.domain}}</a>
+              </span>
+            </p>
             <h3>
-              <a class="title" ui-sref=".item({id: item.id, slug: item.slug})">{{::item.title}}</a>
+              <a class="title" ui-sref=".item({id: item.id, slug: item.slug})" ng-bind-html="::item.title"></a>
             </h3>
             <p class="tagline">
               submitted <time class="created" am-time-ago="::item.created_utc" ng-attr-title="{{::item.created_utc | amDateFormat:'MMM D, YYYY, h:mm A'}}"></time>
-              by <a class="muted" href="#">{{::item.author}}</a>
-              to <a class="muted" ng-href="/r/{{::item.subreddit}}/">{{::item.subreddit}}</a>
+              by <a class="author" href="#">{{::item.author}}</a>
+              to <a class="subreddit" ng-href="/r/{{::item.subreddit}}/">{{::item.subreddit}}</a>
+            </p>
+          </div>
+          <div class="md-tile-right" style="padding-right: 10px;">
+            <p class="tagline">
+              <span class="score">#{{::item.score}}</span>
             </p>
           </div>
         </md-item-content>

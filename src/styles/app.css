@@ -13,6 +13,7 @@ body {
 }
 
 a {
+  color: #2A5DB0;
   text-decoration: none;
 }
 
@@ -49,13 +50,16 @@ time {
 }
 
 .post .title {
-  color: #333;
-  font-weight: 500;
+  color: #2A0097;
 }
 
-.post .tagline {
+.md-tile-content .tagline, .tagline {
   color: #888;
-  font-size: 0.95em;
+  font-size: 0.87em;
+}
+
+.tagline .domain:before {
+  content: "\2022";
 }
 
 .comment:last-child {
@@ -76,8 +80,4 @@ time {
 
 .reply {
   border: 1px dotted rgba(0, 0, 0, 0.12);
-}
-
-.muted {
-  color: #777;
 }

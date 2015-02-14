@@ -2,7 +2,7 @@
     ng-class="{ comment: comment.data.parent_id === comment.data.link_id, reply: comment.data.parent_id !== comment.data.link_id }"
     ng-show="::comment.kind !== 'more'">
 
-  <p>
+  <p class="tagline">
     <a href="#" class="author">{{::comment.data.author}}</a>
     <time class="created" am-time-ago="::comment.data.created_utc" ng-attr-title="{{::comment.data.created_utc | amDateFormat:'MMM D, YYYY, h:mm A'}}"></time>
   </p>
