@@ -2,6 +2,9 @@
   "name": "reddit-web",
   "version": "0.0.1",
   "description": "An alternative interface to Reddit",
+  "scripts": {
+    "postinstall": "npm shrinkwrap --dev"
+  },
   "jspm": {
     "directories": {
       "baseURL": "src",
