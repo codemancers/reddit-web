@@ -1,4 +1,5 @@
 System.config({
+  "transpiler": "babel",
   "paths": {
     "*": "*.js",
     "app/*": "*.js",
