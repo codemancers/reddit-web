@@ -4,7 +4,7 @@ import app from '../main';
 import '../directives/infiniteScroll';
 import '../services/subReddit';
 
-function SubRedditController($stateParams, $state, subReddit) {
+function SubRedditController($stateParams, $state, $timeout, $mdSidenav, subReddit) {
   this.subReddit = subReddit;
   this.subReddit.reset();
   this.subReddit.name = $stateParams.name || 'front';
@@ -12,8 +12,19 @@ function SubRedditController($stateParams, $state, subReddit) {
   this.subReddit.list();
 
   this.title = `/r/${this.subReddit.name}/${this.subReddit.sortOrder}`;
+
+  this.isActive = isActive;
+  this.openMenu = openMenu;
+
+  function isActive() {
+    return $state.current.name === 'front' || $state.current.name === 'subreddit';
+  }
+
+  function openMenu() {
+    $timeout(function() { $mdSidenav('left').open(); });
+  }
 }
 
-SubRedditController.$inject = ['$stateParams', '$state', 'subReddit'];
+SubRedditController.$inject = ['$stateParams', '$state', '$timeout', '$mdSidenav', 'subReddit'];
 
 app.controller('SubRedditController', SubRedditController);

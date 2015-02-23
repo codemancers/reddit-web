@@ -87,3 +87,31 @@ time {
 .reply {
   border: 1px dotted rgba(0, 0, 0, 0.12);
 }
+
+@media (max-width: 960px) {
+  .posts-container:not(.active) {
+    display: none;
+  }
+
+  .posts-container.active .content {
+    animation: fadeIn 1.5s;
+  }
+
+  .post-container:not(.active) {
+    display: none;
+  }
+
+  .post-container.active .content {
+    animation: fadeIn 1.5s;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

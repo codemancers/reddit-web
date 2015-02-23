@@ -10,6 +10,7 @@ import 'angular-markdown-directive';
 
 var app = angular
   .module('redditWeb', [
+    'ngAnimate',
     'ngMaterial',
     'ui.router',
     'angularMoment',

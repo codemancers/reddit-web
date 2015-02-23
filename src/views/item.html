@@ -1,29 +1,31 @@
 <md-toolbar></md-toolbar>
 
-<md-content md-scroll-y style="margin-left: 2px;">
-  <md-card class="post">
-    <div class="embed" ng-bind-html="::ctrl.post.mediaHtml()" ng-if="::ctrl.post.media" layout="row" layout-padding layout-align="center center"></div>
+<div class="content" layout="column" flex>
+  <md-content md-scroll-y style="margin-left: 2px;">
+    <md-card class="post">
+      <div class="embed" ng-bind-html="::ctrl.post.mediaHtml()" ng-if="::ctrl.post.media" layout="row" layout-padding layout-align="center center"></div>
 
-    <img ng-src="{{::ctrl.post.url}}" ng-if="::(ctrl.post.hasImage() && !ctrl.post.media)">
+      <img ng-src="{{::ctrl.post.url}}" ng-if="::(ctrl.post.hasImage() && !ctrl.post.media)">
 
-    <md-card-content>
-      <h3><a class="title" ng-href="{{::ctrl.post.url}}" ng-attr-title="{{::ctrl.post.url}}" target="_blank" ng-bind-html="::ctrl.post.title"></a></h3>
+      <md-card-content>
+        <h3><a class="title" ng-href="{{::ctrl.post.url}}" ng-attr-title="{{::ctrl.post.url}}" target="_blank" ng-bind-html="::ctrl.post.title"></a></h3>
 
-      <div class="selftext" btf-markdown="::ctrl.post.selftext" ng-if="::ctrl.post.selftext"></div>
-    </md-card-content>
-  </md-card>
+        <div class="selftext" btf-markdown="::ctrl.post.selftext" ng-if="::ctrl.post.selftext"></div>
+      </md-card-content>
+    </md-card>
 
-  <md-card>
-    <md-toolbar class="md-accent">
-      <h1 class="md-toolbar-tools">Comments</h1>
-    </md-toolbar>
+    <md-card>
+      <md-toolbar class="md-accent">
+        <h1 class="md-toolbar-tools">Comments</h1>
+      </md-toolbar>
 
-    <div class="comments">
-      <rw-comments comments="ctrl.comments.items"></comments>
-    </div>
+      <div class="comments">
+        <rw-comments comments="ctrl.comments.items"></comments>
+      </div>
 
-    <div ng-if='ctrl.comments.busy' layout="column" layout-align="center center">
-      <md-progress-circular md-mode="indeterminate" md-diameter="36"></md-progress-circular>
-    </div>
-  </md-card>
-</md-content>
+      <div ng-if='ctrl.comments.busy' layout="column" layout-align="center center">
+        <md-progress-circular md-mode="indeterminate" md-diameter="36"></md-progress-circular>
+      </div>
+    </md-card>
+  </md-content>
+</div>

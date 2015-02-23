@@ -12,7 +12,8 @@ System.config({
 
 System.config({
   "map": {
-    "angular": "github:angular/bower-angular@1.3.11",
+    "angular": "github:angular/bower-angular@1.3.13",
+    "angular-animate": "github:angular/bower-angular-animate@1.3.13",
     "angular-markdown-directive": "github:btford/angular-markdown-directive@0.3.1",
     "angular-material": "github:angular/bower-material@0.7.1",
     "angular-mocks": "github:angular/bower-angular-mocks@1.3.11",
@@ -24,23 +25,23 @@ System.config({
     "moment": "github:moment/moment@2.9.0",
     "showdown": "github:showdownjs/showdown@0.3.4",
     "github:angular-ui/ui-router@0.2.13": {
-      "angular": "github:angular/bower-angular@1.3.11"
+      "angular": "github:angular/bower-angular@1.3.13"
     },
-    "github:angular/bower-angular-animate@1.3.11": {
-      "angular": "github:angular/bower-angular@1.3.11"
+    "github:angular/bower-angular-animate@1.3.13": {
+      "angular": "github:angular/bower-angular@1.3.13"
     },
     "github:angular/bower-angular-aria@1.3.11": {
-      "angular": "github:angular/bower-angular@1.3.11"
+      "angular": "github:angular/bower-angular@1.3.13"
     },
     "github:angular/bower-angular-mocks@1.3.11": {
-      "angular": "github:angular/bower-angular@1.3.11"
+      "angular": "github:angular/bower-angular@1.3.13"
     },
     "github:angular/bower-angular-sanitize@1.3.11": {
-      "angular": "github:angular/bower-angular@1.3.11"
+      "angular": "github:angular/bower-angular@1.3.13"
     },
     "github:angular/bower-material@0.7.1": {
-      "angular": "github:angular/bower-angular@1.3.11",
-      "angular-animate": "github:angular/bower-angular-animate@1.3.11",
+      "angular": "github:angular/bower-angular@1.3.13",
+      "angular-animate": "github:angular/bower-angular-animate@1.3.13",
       "angular-aria": "github:angular/bower-angular-aria@1.3.11",
       "css": "github:systemjs/plugin-css@0.1.0"
     },

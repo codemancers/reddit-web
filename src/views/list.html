@@ -1,47 +1,49 @@
-<div layout="column" flex flex-gt-md="33" class="md-whiteframe-z1">
+<div layout="column" flex flex-gt-md="33" class="md-whiteframe-z1 posts-container" ng-class="{ active: ctrl.isActive() }">
   <md-toolbar>
-    <h1 class="md-toolbar-tools">
+    <h1 class="md-toolbar-tools" ng-click="ctrl.openMenu()">
       <a ng-href="{{::ctrl.title}}">{{::ctrl.title}}</a>
     </h1>
   </md-toolbar>
-  <md-content md-scroll-y flex rw-infinite-scroll="ctrl.subReddit.list()">
-    <md-list>
-      <md-item ng-repeat="item in ctrl.subReddit.items">
-        <md-item-content class="post" ui-sref-active="active">
-          <div class="md-tile-left" ng-show="::item.thumbnail">
-            <img ng-src="{{::item.thumbnail}}" class="img-circle">
-          </div>
-          <div class="md-tile-content">
-            <p class="tagline">
-              <span class="score">#{{::item.score}}</span>
-              <span class="domain">
-                <a href="#">{{::item.domain}}</a>
-              </span>
-              <span class="num-comments">{{::item.num_comments}} comments</span>
-            </p>
-            <h3>
-              <a class="title" ui-sref=".item({id: item.id, slug: item.slug})" ng-bind-html="::item.title"></a>
-            </h3>
-            <p class="tagline">
-              submitted <time class="created" am-time-ago="::item.created_utc" ng-attr-title="{{::item.created_utc | amDateFormat:'MMM D, YYYY, h:mm A'}}"></time>
-              by <a class="author" href="#">{{::item.author}}</a>
-              to <a class="subreddit" ng-href="/r/{{::item.subreddit}}/">{{::item.subreddit}}</a>
-            </p>
-          </div>
-        </md-item-content>
-        <md-divider></md-divider>
-      </md-item>
-      <md-item ng-show='ctrl.subReddit.busy'>
-        <md-item-content layout-align="space-around">
-          <md-progress-circular md-mode="indeterminate" md-diameter="36"></md-progress-circular>
-        </md-item-content>
-        <md-divider></md-divider>
-      </md-item>
-    </md-list>
-  </md-content>
+  <div class="content" layout="column" flex>
+    <md-content md-scroll-y flex rw-infinite-scroll="ctrl.subReddit.list()">
+      <md-list>
+        <md-item ng-repeat="item in ctrl.subReddit.items">
+          <md-item-content class="post" ui-sref-active="active">
+            <div class="md-tile-left" ng-show="::item.thumbnail">
+              <img ng-src="{{::item.thumbnail}}" class="img-circle">
+            </div>
+            <div class="md-tile-content">
+              <p class="tagline">
+                <span class="score">#{{::item.score}}</span>
+                <span class="domain">
+                  <a href="#">{{::item.domain}}</a>
+                </span>
+                <span class="num-comments">{{::item.num_comments}} comments</span>
+              </p>
+              <h3>
+                <a class="title" ui-sref=".item({id: item.id, slug: item.slug})" ng-bind-html="::item.title"></a>
+              </h3>
+              <p class="tagline">
+                submitted <time class="created" am-time-ago="::item.created_utc" ng-attr-title="{{::item.created_utc | amDateFormat:'MMM D, YYYY, h:mm A'}}"></time>
+                by <a class="author" href="#">{{::item.author}}</a>
+                to <a class="subreddit" ng-href="/r/{{::item.subreddit}}/">{{::item.subreddit}}</a>
+              </p>
+            </div>
+          </md-item-content>
+          <md-divider></md-divider>
+        </md-item>
+        <md-item ng-show='ctrl.subReddit.busy'>
+          <md-item-content layout-align="space-around">
+            <md-progress-circular md-mode="indeterminate" md-diameter="36"></md-progress-circular>
+          </md-item-content>
+          <md-divider></md-divider>
+        </md-item>
+      </md-list>
+    </md-content>
+  </div>
 </div>
 
-<div ui-view layout="column" flex flex-gt-md="66" hide-sm hide-md>
+<div class="post-container" ui-view layout="column" flex flex-gt-md="66" ng-class="{ active: ctrl.active }">
   <md-toolbar></md-toolbar>
   <md-content md-scroll-y style="margin-left: 2px;"></md-content>
 </div>
