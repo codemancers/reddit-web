@@ -24,6 +24,17 @@ time {
   cursor: help;
 }
 
+button.icon {
+  background: none;
+  border: none;
+  padding: 0;
+  margin-right: 16px;
+}
+
+md-icon.icon-white {
+  fill: #fff;
+}
+
 .sidebar.md-locked-open {
   width: 254px;
   min-width: 254px;

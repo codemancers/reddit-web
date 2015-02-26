@@ -6,7 +6,7 @@ import '../directives/comment';
 import '../services/subReddit';
 import '../services/comments';
 
-function SubRedditItemController($scope, $stateParams, subReddit, Comments) {
+function SubRedditItemController($scope, $state, $stateParams, subReddit, Comments) {
   this.active = true;
   this.post = subReddit.find($stateParams.id);
   this.comments = new Comments($stateParams.id);
@@ -19,8 +19,14 @@ function SubRedditItemController($scope, $stateParams, subReddit, Comments) {
       this.post = this.comments.post;
     });
   }
+
+  this.back = back;
+
+  function back() {
+    $state.go('^');
+  }
 }
 
-SubRedditItemController.$inject = ['$scope', '$stateParams', 'subReddit', 'Comments'];
+SubRedditItemController.$inject = ['$scope', '$state', '$stateParams', 'subReddit', 'Comments'];
 
 app.controller('SubRedditItemController', SubRedditItemController);
