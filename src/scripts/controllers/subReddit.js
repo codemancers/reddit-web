@@ -15,6 +15,7 @@ function SubRedditController($stateParams, $state, $timeout, $mdSidenav, subRedd
 
   this.isActive = isActive;
   this.openMenu = openMenu;
+  this.refresh = refresh;
 
   function isActive() {
     return $state.current.name === 'front' || $state.current.name === 'subreddit';
@@ -22,6 +23,11 @@ function SubRedditController($stateParams, $state, $timeout, $mdSidenav, subRedd
 
   function openMenu() {
     $timeout(function() { $mdSidenav('left').open(); });
+  }
+
+  function refresh() {
+    this.subReddit.reset();
+    this.subReddit.list();
   }
 }
 

@@ -1,10 +1,14 @@
 <div layout="column" flex flex-gt-md="33" class="md-whiteframe-z1 posts-container" ng-class="{ active: ctrl.isActive() }">
   <md-toolbar>
     <div class="md-toolbar-tools">
-      <button class="icon" ng-click="ctrl.openMenu()" hide-gt-md>
-        <md-icon md-svg-src="/images/ic_menu_24px.svg" class="icon-white"></md-icon>
+      <button class="icon icon-open-sidebar" ng-click="ctrl.openMenu()" hide-gt-md>
+        <md-icon md-svg-src="/images/ic_menu_24px.svg"></md-icon>
       </button>
       <a ng-href="{{::ctrl.title}}">{{::ctrl.title}}</a>
+      <span flex></span>
+      <button class="icon" ng-click="ctrl.refresh()">
+        <md-icon md-svg-src="/images/ic_refresh_24px.svg"></md-icon>
+      </button>
     </div>
   </md-toolbar>
   <md-content class="content" md-scroll-y flex rw-infinite-scroll="ctrl.subReddit.list()">

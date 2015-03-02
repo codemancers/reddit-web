@@ -28,11 +28,14 @@ button.icon {
   background: none;
   border: none;
   padding: 0;
+}
+
+button.icon-open-sidebar {
   margin-right: 16px;
 }
 
-md-icon.icon-white {
-  fill: #fff;
+md-toolbar md-icon {
+  fill: #E6E8F6;
 }
 
 .sidebar.md-locked-open {
