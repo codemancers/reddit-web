@@ -26,8 +26,10 @@ function SubRedditController($stateParams, $state, $timeout, $mdSidenav, subRedd
   }
 
   function refresh() {
-    this.subReddit.reset();
-    this.subReddit.list();
+    var state = $state.current.name.split('.')[0];
+    $state.go(state).then(function() {
+      $state.reload();
+    });
   }
 }
 
